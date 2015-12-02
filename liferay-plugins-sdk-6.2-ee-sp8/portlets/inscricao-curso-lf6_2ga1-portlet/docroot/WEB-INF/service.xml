@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="br.com.cnf.curso.inscricao">
+	<author>SEA</author>
+	<namespace>cnf</namespace>
+
+	<entity name="CursoInscricao" local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="inscricaoId" type="long" primary="true" />
+
+		<!-- Foreign Keys -->
+
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+
+		<!-- Outros campos -->
+
+		<column name="userCreateId" type="long" />
+		<column name="userCreateName" type="String" />
+		<column name="userModifiedId" type="long" />
+		<column name="userModifiedName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="cursoId" type="long" />
+		<column name="cursoNome" type="String" />
+		<column name="cursoData" type="String" />
+		<column name="cursoHorario" type="String" />
+		<column name="cursoLocal" type="String" />
+
+		<column name="preco" type="String" />
+		<column name="precoConvenio" type="String" />
+		<column name="precoAssociado" type="String" />
+
+		<column name="tipoFisicaJuridica" type="String" />
+		<column name="cpfCnpj" type="String" />
+		<column name="nomeResponsavel" type="String" />
+		<column name="emailPrincipal" type="String" />
+		<column name="dddTelefoneComercial" type="String" />
+		<column name="telefoneComercial" type="String" />
+		<column name="sexo" type="String" />
+		<column name="cadastroFinalizado" type="boolean" />
+		<column name="formaPagamento" type="String" />
+		<column name="numeroCartao" type="String" />
+		<column name="validadeCartaoMes" type="int" />
+		<column name="validadeCartaoAno" type="int" />
+		<column name="nomeTitularCartao" type="String" />
+		<column name="codigoSegurancaCartao" type="String" />
+		<column name="statusMoedaDigital" type="String" />
+		<column name="quantidadeParcelas" type="int" />
+		<column name="valorTotal" type="double" />
+		<column name="moedaDigitalPedido" type="String" />
+		<column name="dataInicio" type="Date" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="cursoNome" />
+		</order>
+
+		<!-- Finder Methods -->
+
+		<finder name="CompanyGroup" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="Group" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="Company" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+
+		<finder name="CpfCnpj" return-type="CursoInscricao">
+			<finder-column name="cpfCnpj" />
+		</finder>
+
+		<finder name="LikeStatusMoedaDigital" return-type="Collection">
+			<finder-column name="statusMoedaDigital" comparator="LIKE" />
+		</finder>
+
+	</entity>
+
+	<entity name="CursoParticipante" local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="participanteId" type="long" primary="true" />
+
+		<!-- Foreign Keys -->
+
+		<column name="inscricaoId" type="long" />
+
+		<!-- Outros campos -->
+
+		<column name="nomeCompleto" type="String" />
+		<column name="nomeCracha" type="String" />
+		<column name="cpf" type="String" />
+		<column name="sexo" type="String" />
+		<column name="cargo" type="String" />
+		<column name="empresaOndeTrabalha" type="String" />
+		<column name="departamento" type="String" />
+		<column name="formacaoAcademica" type="String" />
+		<column name="emailPrincipal" type="String" />
+		<column name="emailOpcional" type="String" />
+		<column name="dddTelefoneComercial" type="String" />
+		<column name="telefoneComercial" type="String" />
+		<column name="dddTelefonePessoal" type="String" />
+		<column name="telefonePessoal" type="String" />
+		<column name="dddTelefoneCelular" type="String" />
+		<column name="telefoneCelular" type="String" />
+		<column name="endereco" type="String" />
+		<column name="bairro" type="String" />
+		<column name="cidade" type="String" />
+		<column name="estado" type="String" />
+		<column name="cep" type="String" />
+		<column name="valorPago" type="String" />
+		<column name="expectativaCurso" type="String" />
+		<column name="observacao" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="nomeCompleto" />
+		</order>
+
+	</entity>
+
+	<entity name="CursoInscricaoCnpj" local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="inscricaoCnpjId" type="long" primary="true" />
+
+		<!-- Foreign Keys -->
+
+		<column name="inscricaoId" type="long" />
+
+		<!-- Outros campos -->
+
+		<column name="razaoSocial" type="String" />
+		<column name="nomeFantasia" type="String" />
+		<column name="inscricaoEstadual" type="String" />
+
+		<column name="endereco" type="String" />
+		<column name="bairro" type="String" />
+		<column name="cidade" type="String" />
+		<column name="estado" type="String" />
+		<column name="cep" type="String" />
+		<column name="dddTelefone" type="String" />
+		<column name="telefone" type="String" />
+
+		<column name="nfNome" type="String" />
+		<column name="nfDepartamento" type="String" />
+		<column name="nfEmail" type="String" />
+		<column name="nfDddTelefone" type="String" />
+		<column name="nfTelefone" type="String" />
+		
+		<column name="observacao" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="razaoSocial" />
+		</order>
+
+	</entity>
+
+	<entity name="CursoInscricaoCpf" local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="inscricaoCpfId" type="long" primary="true" />
+
+		<!-- Foreign Keys -->
+
+		<column name="inscricaoId" type="long" />
+
+		<!-- Outros campos -->
+
+		<column name="nome" type="String" />
+		<column name="cpf" type="String" />
+		<column name="endereco" type="String" />
+		<column name="bairro" type="String" />
+		<column name="cidade" type="String" />
+		<column name="estado" type="String" />
+		<column name="cep" type="String" />
+		<column name="dddTelefone" type="String" />
+		<column name="telefone" type="String" />
+		<column name="email" type="String" />
+		
+		<column name="empresa" type="String" />
+		<column name="cargo" type="String" />
+		<column name="departamento" type="String" />
+		
+		<column name="observacao" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="nome" />
+		</order>
+
+	</entity>
+
+	<entity name="PedidoMoedaDigital" local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="pedidoMoedaDigitalId" type="long" primary="true" />
+
+		<!-- Foreign Keys -->
+
+		<column name="inscricaoId" type="long" />
+
+		<!-- Outros campos -->
+
+		<column name="dataPedido" type="Date" />
+		<column name="xmlEnvio" type="String" localized="true" />
+		<column name="xmlRetorno" type="String" localized="true" />
+
+	</entity>
+</service-builder>

@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="br.com.cnf.curso.inscricao.model.CursoInscricao" />
+	<import class="br.com.cnf.curso.inscricao.model.CursoInscricaoCnpj" />
+	<import class="br.com.cnf.curso.inscricao.model.CursoInscricaoCpf" />
+	<import class="br.com.cnf.curso.inscricao.model.CursoParticipante" />
+	<import class="br.com.cnf.curso.inscricao.model.PedidoMoedaDigital" />
+	<class name="br.com.cnf.curso.inscricao.model.impl.CursoInscricaoImpl" table="cnf_CursoInscricao">
+		<cache usage="read-write" />
+		<id name="inscricaoId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userCreateId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userCreateName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userModifiedId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userModifiedName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="cursoId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="cursoNome" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cursoData" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cursoHorario" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cursoLocal" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="preco" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="precoConvenio" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="precoAssociado" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="tipoFisicaJuridica" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cpfCnpj" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="nomeResponsavel" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailPrincipal" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="dddTelefoneComercial" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="telefoneComercial" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="sexo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cadastroFinalizado" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="formaPagamento" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="numeroCartao" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="validadeCartaoMes" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="validadeCartaoAno" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="nomeTitularCartao" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="codigoSegurancaCartao" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="statusMoedaDigital" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="quantidadeParcelas" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="valorTotal" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="moedaDigitalPedido" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="dataInicio" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="br.com.cnf.curso.inscricao.model.impl.CursoInscricaoCnpjImpl" table="cnf_CursoInscricaoCnpj">
+		<cache usage="read-write" />
+		<id name="inscricaoCnpjId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="inscricaoId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="razaoSocial" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="nomeFantasia" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="inscricaoEstadual" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="endereco" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="bairro" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cidade" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="estado" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cep" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="dddTelefone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="telefone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="nfNome" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="nfDepartamento" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="nfEmail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="nfDddTelefone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="nfTelefone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="observacao" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="br.com.cnf.curso.inscricao.model.impl.CursoInscricaoCpfImpl" table="cnf_CursoInscricaoCpf">
+		<cache usage="read-write" />
+		<id name="inscricaoCpfId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="inscricaoId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="nome" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cpf" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="endereco" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="bairro" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cidade" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="estado" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cep" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="dddTelefone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="telefone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="empresa" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cargo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="departamento" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="observacao" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="br.com.cnf.curso.inscricao.model.impl.CursoParticipanteImpl" table="cnf_CursoParticipante">
+		<cache usage="read-write" />
+		<id name="participanteId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="inscricaoId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="nomeCompleto" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="nomeCracha" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cpf" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="sexo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cargo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="empresaOndeTrabalha" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="departamento" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="formacaoAcademica" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailPrincipal" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailOpcional" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="dddTelefoneComercial" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="telefoneComercial" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="dddTelefonePessoal" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="telefonePessoal" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="dddTelefoneCelular" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="telefoneCelular" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="endereco" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="bairro" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cidade" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="estado" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cep" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="valorPago" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="expectativaCurso" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="observacao" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="br.com.cnf.curso.inscricao.model.impl.PedidoMoedaDigitalImpl" table="cnf_PedidoMoedaDigital">
+		<cache usage="read-write" />
+		<id name="pedidoMoedaDigitalId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="inscricaoId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="dataPedido" type="org.hibernate.type.TimestampType" />
+		<property name="xmlEnvio" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="xmlRetorno" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

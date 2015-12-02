@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="br.com.cnf.curso.inscricao.model.CursoInscricao">
+		<field name="inscricaoId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userCreateId" type="long" />
+		<field name="userCreateName" type="String" />
+		<field name="userModifiedId" type="long" />
+		<field name="userModifiedName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="cursoId" type="long" />
+		<field name="cursoNome" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="cursoData" type="String" />
+		<field name="cursoHorario" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="cursoLocal" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="preco" type="String" />
+		<field name="precoConvenio" type="String" />
+		<field name="precoAssociado" type="String" />
+		<field name="tipoFisicaJuridica" type="String" />
+		<field name="cpfCnpj" type="String" />
+		<field name="nomeResponsavel" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="emailPrincipal" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="dddTelefoneComercial" type="String">
+			<hint name="max-length">2</hint>
+		</field>
+		<field name="telefoneComercial" type="String">
+			<hint name="max-length">10</hint>
+		</field>
+		<field name="sexo" type="String" />
+		<field name="cadastroFinalizado" type="boolean" />
+		<field name="formaPagamento" type="String" />
+		<field name="numeroCartao" type="String" />
+		<field name="validadeCartaoMes" type="int" />
+		<field name="validadeCartaoAno" type="int" />
+		<field name="nomeTitularCartao" type="String" />
+		<field name="codigoSegurancaCartao" type="String" />
+		<field name="statusMoedaDigital" type="String" />
+		<field name="quantidadeParcelas" type="int" />
+		<field name="valorTotal" type="double" />
+		<field name="moedaDigitalPedido" type="String" />
+		<field name="dataInicio" type="Date" />
+	</model>
+	<model name="br.com.cnf.curso.inscricao.model.CursoInscricaoCnpj">
+		<field name="inscricaoCnpjId" type="long" />
+		<field name="inscricaoId" type="long" />
+		<field name="razaoSocial" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="nomeFantasia" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="inscricaoEstadual" type="String" />
+		<field name="endereco" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="bairro" type="String" />
+		<field name="cidade" type="String" />
+		<field name="estado" type="String" />
+		<field name="cep" type="String" />
+		<field name="dddTelefone" type="String">
+			<hint name="max-length">2</hint>
+		</field>
+		<field name="telefone" type="String">
+			<hint name="max-length">10</hint>
+		</field>
+		<field name="nfNome" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="nfDepartamento" type="String" />
+		<field name="nfEmail" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="nfDddTelefone" type="String">
+			<hint name="max-length">2</hint>
+		</field>
+		<field name="nfTelefone" type="String">
+			<hint name="max-length">10</hint>
+		</field>
+		<field name="observacao" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+	</model>
+	<model name="br.com.cnf.curso.inscricao.model.CursoInscricaoCpf">
+		<field name="inscricaoCpfId" type="long" />
+		<field name="inscricaoId" type="long" />
+		<field name="nome" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="cpf" type="String" />
+		<field name="endereco" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="bairro" type="String" />
+		<field name="cidade" type="String" />
+		<field name="estado" type="String" />
+		<field name="cep" type="String" />
+		<field name="dddTelefone" type="String">
+			<hint name="max-length">2</hint>
+		</field>
+		<field name="telefone" type="String">
+			<hint name="max-length">10</hint>
+		</field>
+		<field name="email" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="empresa" type="String" />
+		<field name="cargo" type="String" />
+		<field name="departamento" type="String" />
+		<field name="observacao" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+	</model>
+	<model name="br.com.cnf.curso.inscricao.model.CursoParticipante">
+		<field name="participanteId" type="long" />
+		<field name="inscricaoId" type="long" />
+		<field name="nomeCompleto" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="nomeCracha" type="String">
+			<hint name="max-length">100</hint>
+		</field>
+		<field name="cpf" type="String" />
+		<field name="sexo" type="String" />
+		<field name="cargo" type="String" />
+		<field name="empresaOndeTrabalha" type="String">
+			<hint name="max-length">100</hint>
+		</field>
+		<field name="departamento" type="String" />
+		<field name="formacaoAcademica" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="emailPrincipal" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="emailOpcional" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="dddTelefoneComercial" type="String">
+			<hint name="max-length">2</hint>
+		</field>
+		<field name="telefoneComercial" type="String">
+			<hint name="max-length">10</hint>
+		</field>
+		<field name="dddTelefonePessoal" type="String">
+			<hint name="max-length">2</hint>
+		</field>
+		<field name="telefonePessoal" type="String">
+			<hint name="max-length">10</hint>
+		</field>
+		<field name="dddTelefoneCelular" type="String">
+			<hint name="max-length">2</hint>
+		</field>
+		<field name="telefoneCelular" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="endereco" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="bairro" type="String" />
+		<field name="cidade" type="String" />
+		<field name="estado" type="String" />
+		<field name="cep" type="String" />
+		<field name="valorPago" type="String" />
+		<field name="expectativaCurso" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="observacao" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+	</model>
+	<model name="br.com.cnf.curso.inscricao.model.PedidoMoedaDigital">
+		<field name="pedidoMoedaDigitalId" type="long" />
+		<field name="inscricaoId" type="long" />
+		<field name="dataPedido" type="Date" />
+		<field name="xmlEnvio" type="String" localized="true" />
+		<field name="xmlRetorno" type="String" localized="true" />
+	</model>
+</model-hints>

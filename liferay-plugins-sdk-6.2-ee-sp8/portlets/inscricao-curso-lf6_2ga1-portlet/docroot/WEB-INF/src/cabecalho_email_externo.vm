@@ -1,0 +1,74 @@
+Senhor(a) $participante.getNomeCompleto(),
+
+<p/>
+Sua inscrição foi realizada com sucesso!
+ 
+<p/>
+<b>Curso:</b> $inscricao.getCursoNome()
+
+<p/>
+<b>Data de Realização:</b> $inscricao.getCursoData()
+
+<p/>
+<b>Horário:</b> $inscricao.getCursoHorario()
+
+<p/>
+<b>Local:</b> $inscricao.getCursoLocal()
+
+<br/>
+<center>Confira o Mapa <b><a href='$linkMapa'>AQUI</a></b></center>
+
+<p/>
+<b>Cancelamento:</b> 
+
+<p/>
+Não será aceito cancelamento, após a confirmação do curso. Na impossibilidade de comparecimento, serão aceitas as substituições dos participantes. 
+
+<p/>
+<b>Contato:</b>
+<br/>
+Denise Faria - (61) 3218-5371/ (61) 8133-9359 
+<br/>
+E-mail: cursos.eventos@cnf.org.br
+
+<p/>
+<b>Informações para pagamento:</b>
+
+<p/>
+Solicitamos que ratifique sua inscrição com o pagamento no valor de $participante.getValorPago() ou valor referente ao pagamento da 1° parcela, até o dia $dataParcela, por meio de depósito em conta corrente (dados abaixo). O restante do pagamento poderá ser realizado pessoalmente durante os dias do curso com a entrega de cheque pré-datado.
+
+<p/>
+A nota fiscal será entregue ao participante no último dia do curso.
+<p/>
+<b>Dados para o depósito</b>
+<br/>
+Em nome da: Confederação Nacional das Instituições Financeiras - CNF
+<br/>
+CNPJ: 01.634.120/0001-03
+<br/>
+Banco Bradesco (237)
+<br/>
+Agência: 0606-8
+<br/>
+Conta corrente: 108600-6 
+<p/>
+
+A CNF é isenta de IR.  
+<p/>
+Conforme disposto no art. 7º e § 5º do art. 8º do Decreto 25.508/2005, o contribuinte do ISS sobre os serviços de "Instrução e treinamento" é o prestador, não cabendo, dessa forma, a retenção do imposto.
+<p/>
+
+Estamos à disposição para quaisquer informações a respeito. 
+
+<p/>
+Solicitamos a confirmação do recebimento desta mensagem, enviando um e-mail para cursos.eventos@cnf.org.br
+
+<p/>
+Atenciosamente,
+
+<p/>
+Departamento de Cursos e Eventos
+<p/>
+__________________________________________
+<p/>
+<p/>

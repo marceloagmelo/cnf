@@ -1,0 +1,84 @@
+.taglib-page-iterator .search-results {
+	float: right;
+}
+
+.aui-field-content {
+	display: inline;
+}
+
+.largura-coluna-unica {
+	width: 70%;
+}
+
+.largura-coluna-acoes {
+	width: 30%;
+}
+
+.campo-obrigatorio {
+	color: red;
+}
+
+.bloco-titulo {
+	margin-bottom: 20px;
+}
+.results-row td {
+	font-size: 11px;
+}
+
+.results-header th {
+	font-size: 11px;
+}
+
+.results-header td {
+	font-size: 11px;	
+}
+
+.bloco-titulo h1 {
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+.bloco-titulo h2 {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.bloco-titulo h1.castanho {
+	color: #382100 !important;
+}
+
+.bloco-titulo h1.vinho {
+	color: #92100F !important;
+}
+
+.bloco-titulo h1.azul-marinho {
+	color: #062438 !important;
+}
+
+.bloco-titulo h1.verde-oliva {
+	color: #525108 !important;
+}
+
+.bloco-titulo label {
+	width: 35%;
+	text-align: right;
+	display: table-cell;
+	float: left;
+	vertical-align: bottom;
+	height: 25px;
+	line-height: 25px;
+}
+
+.bloco-titulo label.texto-longo {
+	width: 100%;
+	text-align: left;
+	display: table-cell;
+	float: left;
+	vertical-align: bottom;
+	height: 25px;
+	line-height: 25px;
+}
+
+.bloco-titulo input.largura-total {
+	width: 60%;
+}

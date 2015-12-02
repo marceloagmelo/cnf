@@ -1,0 +1,20 @@
+Prezado,
+
+<p/>
+Data do Início do Curso não Cadastrada!
+ 
+<p/>
+<b>Curso:</b> $inscricao.getCursoNome()
+
+<br/>
+<center>Clique <b><a href='$linkConteudo'>AQUI</a></b></center>
+
+<p/>
+Atenciosamente,
+
+<p/>
+Departamento de Cursos e Eventos
+<p/>
+__________________________________________
+<p/>
+<p/>

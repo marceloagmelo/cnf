@@ -1,0 +1,28 @@
+<%@page import="br.com.cnf.curso.inscricao.util.Search"%>
+<%@page import="br.com.cnf.curso.inscricao.Constantes"%>
+
+<div class="bloco-titulo">
+	<h1><liferay-ui:message key="label.curso" /></h1>
+	
+	<strong>
+	<p>
+		<%=cursoInscricao.getCursoId()%>
+		-
+		<%=cursoInscricao.getCursoNome()%>
+	</p>
+	</strong>
+	<p>
+		<strong><liferay-ui:message key="label.data" /></strong>: <%=cursoInscricao.getCursoData()%>
+		<br/>
+		<strong><liferay-ui:message key="label.horario" /></strong>: <%=cursoInscricao.getCursoHorario()%>
+		<br/>
+		<strong><liferay-ui:message key="label.local" /></strong>: <%=cursoInscricao.getCursoLocal()%>
+	</p>
+	<p>
+		<strong><liferay-ui:message key="label.preco" /></strong>: <%= Search.recuperarAtributo(request, cursoInscricao.getCursoId(), Constantes.PRECO) %> |
+		<strong><liferay-ui:message key="label.precoPorConvenio" /></strong>: <%= Search.recuperarAtributo(request, cursoInscricao.getCursoId(), Constantes.PRECO_CONVENIO) %> |
+		<strong><liferay-ui:message key="label.precoPorAssociado" /></strong>: <%= Search.recuperarAtributo(request, cursoInscricao.getCursoId(), Constantes.PRECO_ASSOCIADO) %>
+	</p>
+</div>
+
+<hr />

@@ -1,0 +1,1164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ConsultaMeiosDePagamento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Loja" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Aplicacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Meios" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaMeiosDePagamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaMeiosDePagamentoResult" type="tns:ArrayOfRetornoMeiosPagamento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRetornoMeiosPagamento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RetornoMeiosPagamento" type="tns:RetornoMeiosPagamento" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RetornoMeiosPagamento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descricao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Parcelado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Imagem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensagem" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultaMeiosDePagamentoXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Loja" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Aplicacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Meios" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaMeiosDePagamentoXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaMeiosDePagamentoXMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaMeiosDePagamentoMagento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Loja" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Aplicacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Meios" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Valor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaMeiosDePagamentoMagentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConsultaMeiosDePagamentoMagentoResult" type="tns:RetornoMeiosPagamento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaMeiosDePagamentoHTML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Loja" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Aplicacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Meios" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Valor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaMeiosDePagamentoHTMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaMeiosDePagamentoHTMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaMeiosDePagamentoHTMLv2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Loja" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Aplicacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Meios" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Valor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Idioma" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaMeiosDePagamentoHTMLv2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaMeiosDePagamentoHTMLv2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaParcelasHTML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Loja" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Aplicacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Valor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaParcelasHTMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaParcelasHTMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaParcelasArray">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Loja" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Aplicacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Valor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaParcelasArrayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaParcelasArrayResult" type="tns:ArrayOfRetornoParcelas" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRetornoParcelas">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RetornoParcelas" type="tns:RetornoParcelas" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RetornoParcelas">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Parcela" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ValorTotal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ValorParcela" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Obs" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensagem" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultaParcelasXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Loja" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Aplicacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Valor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaParcelasXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaParcelasXMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IniciarPagamento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PedidoXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IniciarPagamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IniciarPagamentoResult" type="tns:RetornoPedido" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RetornoPedido">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NSU" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensagem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Retorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PedidoStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Conteudo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PedidoNumeroLoja" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="IniciarPagamentoXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PedidoXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IniciarPagamentoXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IniciarPagamentoXMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaStatusPagamento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Loja" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Aplicacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pedido" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaStatusPagamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConsultaStatusPagamentoResult" type="tns:RetornoStatusPagamento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RetornoStatusPagamento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PedidoNumeroLoja" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Modulo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MeioPagamento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataPagamento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ValorPago" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NivelRisco" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensagem" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultaStatusPagamentoXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Loja" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Aplicacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pedido" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaStatusPagamentoXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaStatusPagamentoXMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfRetornoMeiosPagamento" nillable="true" type="tns:ArrayOfRetornoMeiosPagamento" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="RetornoMeiosPagamento" type="tns:RetornoMeiosPagamento" />
+      <s:element name="ArrayOfRetornoParcelas" nillable="true" type="tns:ArrayOfRetornoParcelas" />
+      <s:element name="RetornoPedido" type="tns:RetornoPedido" />
+      <s:element name="RetornoStatusPagamento" type="tns:RetornoStatusPagamento" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ConsultaMeiosDePagamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaMeiosDePagamento" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaMeiosDePagamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaMeiosDePagamentoXML" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaMeiosDePagamentoXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoMagentoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaMeiosDePagamentoMagento" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoMagentoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaMeiosDePagamentoMagentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoHTMLSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaMeiosDePagamentoHTML" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoHTMLSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaMeiosDePagamentoHTMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoHTMLv2SoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaMeiosDePagamentoHTMLv2" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoHTMLv2SoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaMeiosDePagamentoHTMLv2Response" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaParcelasHTMLSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaParcelasHTML" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaParcelasHTMLSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaParcelasHTMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaParcelasArraySoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaParcelasArray" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaParcelasArraySoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaParcelasArrayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaParcelasXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaParcelasXML" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaParcelasXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaParcelasXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IniciarPagamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:IniciarPagamento" />
+  </wsdl:message>
+  <wsdl:message name="IniciarPagamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:IniciarPagamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IniciarPagamentoXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:IniciarPagamentoXML" />
+  </wsdl:message>
+  <wsdl:message name="IniciarPagamentoXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:IniciarPagamentoXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaStatusPagamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaStatusPagamento" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaStatusPagamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaStatusPagamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaStatusPagamentoXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaStatusPagamentoXML" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaStatusPagamentoXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaStatusPagamentoXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoHttpGetIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Meios" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRetornoMeiosPagamento" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoXMLHttpGetIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Meios" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoXMLHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoMagentoHttpGetIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Meios" type="s:string" />
+    <wsdl:part name="Valor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoMagentoHttpGetOut">
+    <wsdl:part name="Body" element="tns:RetornoMeiosPagamento" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoHTMLHttpGetIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Meios" type="s:string" />
+    <wsdl:part name="Valor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoHTMLHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoHTMLv2HttpGetIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Meios" type="s:string" />
+    <wsdl:part name="Valor" type="s:string" />
+    <wsdl:part name="Idioma" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoHTMLv2HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaParcelasHTMLHttpGetIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Valor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaParcelasHTMLHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaParcelasArrayHttpGetIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Valor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaParcelasArrayHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRetornoParcelas" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaParcelasXMLHttpGetIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Valor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaParcelasXMLHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="IniciarPagamentoHttpGetIn">
+    <wsdl:part name="PedidoXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IniciarPagamentoHttpGetOut">
+    <wsdl:part name="Body" element="tns:RetornoPedido" />
+  </wsdl:message>
+  <wsdl:message name="IniciarPagamentoXMLHttpGetIn">
+    <wsdl:part name="PedidoXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IniciarPagamentoXMLHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaStatusPagamentoHttpGetIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Pedido" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaStatusPagamentoHttpGetOut">
+    <wsdl:part name="Body" element="tns:RetornoStatusPagamento" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaStatusPagamentoXMLHttpGetIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Pedido" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaStatusPagamentoXMLHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoHttpPostIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Meios" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRetornoMeiosPagamento" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoXMLHttpPostIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Meios" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoXMLHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoMagentoHttpPostIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Meios" type="s:string" />
+    <wsdl:part name="Valor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoMagentoHttpPostOut">
+    <wsdl:part name="Body" element="tns:RetornoMeiosPagamento" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoHTMLHttpPostIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Meios" type="s:string" />
+    <wsdl:part name="Valor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoHTMLHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoHTMLv2HttpPostIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Meios" type="s:string" />
+    <wsdl:part name="Valor" type="s:string" />
+    <wsdl:part name="Idioma" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMeiosDePagamentoHTMLv2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaParcelasHTMLHttpPostIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Valor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaParcelasHTMLHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaParcelasArrayHttpPostIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Valor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaParcelasArrayHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRetornoParcelas" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaParcelasXMLHttpPostIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Valor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaParcelasXMLHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="IniciarPagamentoHttpPostIn">
+    <wsdl:part name="PedidoXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IniciarPagamentoHttpPostOut">
+    <wsdl:part name="Body" element="tns:RetornoPedido" />
+  </wsdl:message>
+  <wsdl:message name="IniciarPagamentoXMLHttpPostIn">
+    <wsdl:part name="PedidoXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IniciarPagamentoXMLHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaStatusPagamentoHttpPostIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Pedido" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaStatusPagamentoHttpPostOut">
+    <wsdl:part name="Body" element="tns:RetornoStatusPagamento" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaStatusPagamentoXMLHttpPostIn">
+    <wsdl:part name="Loja" type="s:string" />
+    <wsdl:part name="Aplicacao" type="s:string" />
+    <wsdl:part name="Pedido" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaStatusPagamentoXMLHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="GatewaySoap">
+    <wsdl:operation name="ConsultaMeiosDePagamento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Meios de Pagamentos disponiveis para uma Loja</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaMeiosDePagamentoSoapIn" />
+      <wsdl:output message="tns:ConsultaMeiosDePagamentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Meios de Pagamentos disponiveis para uma Loja</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaMeiosDePagamentoXMLSoapIn" />
+      <wsdl:output message="tns:ConsultaMeiosDePagamentoXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoMagento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Meios de Pagamentos disponiveis para uma Loja Magento</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaMeiosDePagamentoMagentoSoapIn" />
+      <wsdl:output message="tns:ConsultaMeiosDePagamentoMagentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoHTML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Meios de Pagamentos disponiveis HTML</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaMeiosDePagamentoHTMLSoapIn" />
+      <wsdl:output message="tns:ConsultaMeiosDePagamentoHTMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoHTMLv2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Meios de Pagamentos disponiveis HTML</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaMeiosDePagamentoHTMLv2SoapIn" />
+      <wsdl:output message="tns:ConsultaMeiosDePagamentoHTMLv2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasHTML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Valores das parcelas HTML</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaParcelasHTMLSoapIn" />
+      <wsdl:output message="tns:ConsultaParcelasHTMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasArray">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Valores das parcelas Array</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaParcelasArraySoapIn" />
+      <wsdl:output message="tns:ConsultaParcelasArraySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Valores das parcelas Array</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaParcelasXMLSoapIn" />
+      <wsdl:output message="tns:ConsultaParcelasXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IniciarPagamento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registra um pedido para ser pago pelo cliente em XML</wsdl:documentation>
+      <wsdl:input message="tns:IniciarPagamentoSoapIn" />
+      <wsdl:output message="tns:IniciarPagamentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IniciarPagamentoXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registra um pedido para ser pago pelo cliente em XML</wsdl:documentation>
+      <wsdl:input message="tns:IniciarPagamentoXMLSoapIn" />
+      <wsdl:output message="tns:IniciarPagamentoXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaStatusPagamento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna o status de um pedido</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaStatusPagamentoSoapIn" />
+      <wsdl:output message="tns:ConsultaStatusPagamentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaStatusPagamentoXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna o status de um pedido</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaStatusPagamentoXMLSoapIn" />
+      <wsdl:output message="tns:ConsultaStatusPagamentoXMLSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="GatewayHttpGet">
+    <wsdl:operation name="ConsultaMeiosDePagamento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Meios de Pagamentos disponiveis para uma Loja</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaMeiosDePagamentoHttpGetIn" />
+      <wsdl:output message="tns:ConsultaMeiosDePagamentoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Meios de Pagamentos disponiveis para uma Loja</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaMeiosDePagamentoXMLHttpGetIn" />
+      <wsdl:output message="tns:ConsultaMeiosDePagamentoXMLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoMagento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Meios de Pagamentos disponiveis para uma Loja Magento</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaMeiosDePagamentoMagentoHttpGetIn" />
+      <wsdl:output message="tns:ConsultaMeiosDePagamentoMagentoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoHTML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Meios de Pagamentos disponiveis HTML</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaMeiosDePagamentoHTMLHttpGetIn" />
+      <wsdl:output message="tns:ConsultaMeiosDePagamentoHTMLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoHTMLv2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Meios de Pagamentos disponiveis HTML</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaMeiosDePagamentoHTMLv2HttpGetIn" />
+      <wsdl:output message="tns:ConsultaMeiosDePagamentoHTMLv2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasHTML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Valores das parcelas HTML</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaParcelasHTMLHttpGetIn" />
+      <wsdl:output message="tns:ConsultaParcelasHTMLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasArray">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Valores das parcelas Array</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaParcelasArrayHttpGetIn" />
+      <wsdl:output message="tns:ConsultaParcelasArrayHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Valores das parcelas Array</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaParcelasXMLHttpGetIn" />
+      <wsdl:output message="tns:ConsultaParcelasXMLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IniciarPagamento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registra um pedido para ser pago pelo cliente em XML</wsdl:documentation>
+      <wsdl:input message="tns:IniciarPagamentoHttpGetIn" />
+      <wsdl:output message="tns:IniciarPagamentoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IniciarPagamentoXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registra um pedido para ser pago pelo cliente em XML</wsdl:documentation>
+      <wsdl:input message="tns:IniciarPagamentoXMLHttpGetIn" />
+      <wsdl:output message="tns:IniciarPagamentoXMLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaStatusPagamento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna o status de um pedido</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaStatusPagamentoHttpGetIn" />
+      <wsdl:output message="tns:ConsultaStatusPagamentoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaStatusPagamentoXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna o status de um pedido</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaStatusPagamentoXMLHttpGetIn" />
+      <wsdl:output message="tns:ConsultaStatusPagamentoXMLHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="GatewayHttpPost">
+    <wsdl:operation name="ConsultaMeiosDePagamento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Meios de Pagamentos disponiveis para uma Loja</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaMeiosDePagamentoHttpPostIn" />
+      <wsdl:output message="tns:ConsultaMeiosDePagamentoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Meios de Pagamentos disponiveis para uma Loja</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaMeiosDePagamentoXMLHttpPostIn" />
+      <wsdl:output message="tns:ConsultaMeiosDePagamentoXMLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoMagento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Meios de Pagamentos disponiveis para uma Loja Magento</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaMeiosDePagamentoMagentoHttpPostIn" />
+      <wsdl:output message="tns:ConsultaMeiosDePagamentoMagentoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoHTML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Meios de Pagamentos disponiveis HTML</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaMeiosDePagamentoHTMLHttpPostIn" />
+      <wsdl:output message="tns:ConsultaMeiosDePagamentoHTMLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoHTMLv2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Meios de Pagamentos disponiveis HTML</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaMeiosDePagamentoHTMLv2HttpPostIn" />
+      <wsdl:output message="tns:ConsultaMeiosDePagamentoHTMLv2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasHTML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Valores das parcelas HTML</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaParcelasHTMLHttpPostIn" />
+      <wsdl:output message="tns:ConsultaParcelasHTMLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasArray">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Valores das parcelas Array</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaParcelasArrayHttpPostIn" />
+      <wsdl:output message="tns:ConsultaParcelasArrayHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta os Valores das parcelas Array</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaParcelasXMLHttpPostIn" />
+      <wsdl:output message="tns:ConsultaParcelasXMLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IniciarPagamento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registra um pedido para ser pago pelo cliente em XML</wsdl:documentation>
+      <wsdl:input message="tns:IniciarPagamentoHttpPostIn" />
+      <wsdl:output message="tns:IniciarPagamentoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IniciarPagamentoXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registra um pedido para ser pago pelo cliente em XML</wsdl:documentation>
+      <wsdl:input message="tns:IniciarPagamentoXMLHttpPostIn" />
+      <wsdl:output message="tns:IniciarPagamentoXMLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaStatusPagamento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna o status de um pedido</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaStatusPagamentoHttpPostIn" />
+      <wsdl:output message="tns:ConsultaStatusPagamentoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaStatusPagamentoXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna o status de um pedido</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaStatusPagamentoXMLHttpPostIn" />
+      <wsdl:output message="tns:ConsultaStatusPagamentoXMLHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GatewaySoap" type="tns:GatewaySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultaMeiosDePagamento">
+      <soap:operation soapAction="http://tempuri.org/ConsultaMeiosDePagamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoXML">
+      <soap:operation soapAction="http://tempuri.org/ConsultaMeiosDePagamentoXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoMagento">
+      <soap:operation soapAction="http://tempuri.org/ConsultaMeiosDePagamentoMagento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoHTML">
+      <soap:operation soapAction="http://tempuri.org/ConsultaMeiosDePagamentoHTML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoHTMLv2">
+      <soap:operation soapAction="http://tempuri.org/ConsultaMeiosDePagamentoHTMLv2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasHTML">
+      <soap:operation soapAction="http://tempuri.org/ConsultaParcelasHTML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasArray">
+      <soap:operation soapAction="http://tempuri.org/ConsultaParcelasArray" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasXML">
+      <soap:operation soapAction="http://tempuri.org/ConsultaParcelasXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniciarPagamento">
+      <soap:operation soapAction="http://tempuri.org/IniciarPagamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniciarPagamentoXML">
+      <soap:operation soapAction="http://tempuri.org/IniciarPagamentoXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaStatusPagamento">
+      <soap:operation soapAction="http://tempuri.org/ConsultaStatusPagamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaStatusPagamentoXML">
+      <soap:operation soapAction="http://tempuri.org/ConsultaStatusPagamentoXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GatewaySoap12" type="tns:GatewaySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultaMeiosDePagamento">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaMeiosDePagamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoXML">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaMeiosDePagamentoXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoMagento">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaMeiosDePagamentoMagento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoHTML">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaMeiosDePagamentoHTML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoHTMLv2">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaMeiosDePagamentoHTMLv2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasHTML">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaParcelasHTML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasArray">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaParcelasArray" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasXML">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaParcelasXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniciarPagamento">
+      <soap12:operation soapAction="http://tempuri.org/IniciarPagamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniciarPagamentoXML">
+      <soap12:operation soapAction="http://tempuri.org/IniciarPagamentoXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaStatusPagamento">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaStatusPagamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaStatusPagamentoXML">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaStatusPagamentoXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GatewayHttpGet" type="tns:GatewayHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="ConsultaMeiosDePagamento">
+      <http:operation location="/ConsultaMeiosDePagamento" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoXML">
+      <http:operation location="/ConsultaMeiosDePagamentoXML" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoMagento">
+      <http:operation location="/ConsultaMeiosDePagamentoMagento" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoHTML">
+      <http:operation location="/ConsultaMeiosDePagamentoHTML" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoHTMLv2">
+      <http:operation location="/ConsultaMeiosDePagamentoHTMLv2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasHTML">
+      <http:operation location="/ConsultaParcelasHTML" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasArray">
+      <http:operation location="/ConsultaParcelasArray" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasXML">
+      <http:operation location="/ConsultaParcelasXML" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniciarPagamento">
+      <http:operation location="/IniciarPagamento" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniciarPagamentoXML">
+      <http:operation location="/IniciarPagamentoXML" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaStatusPagamento">
+      <http:operation location="/ConsultaStatusPagamento" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaStatusPagamentoXML">
+      <http:operation location="/ConsultaStatusPagamentoXML" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GatewayHttpPost" type="tns:GatewayHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="ConsultaMeiosDePagamento">
+      <http:operation location="/ConsultaMeiosDePagamento" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoXML">
+      <http:operation location="/ConsultaMeiosDePagamentoXML" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoMagento">
+      <http:operation location="/ConsultaMeiosDePagamentoMagento" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoHTML">
+      <http:operation location="/ConsultaMeiosDePagamentoHTML" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMeiosDePagamentoHTMLv2">
+      <http:operation location="/ConsultaMeiosDePagamentoHTMLv2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasHTML">
+      <http:operation location="/ConsultaParcelasHTML" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasArray">
+      <http:operation location="/ConsultaParcelasArray" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaParcelasXML">
+      <http:operation location="/ConsultaParcelasXML" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniciarPagamento">
+      <http:operation location="/IniciarPagamento" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniciarPagamentoXML">
+      <http:operation location="/IniciarPagamentoXML" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaStatusPagamento">
+      <http:operation location="/ConsultaStatusPagamento" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaStatusPagamentoXML">
+      <http:operation location="/ConsultaStatusPagamentoXML" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Gateway">
+    <wsdl:port name="GatewaySoap" binding="tns:GatewaySoap">
+      <soap:address location="https://moedadigital.net/Gateway.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GatewaySoap12" binding="tns:GatewaySoap12">
+      <soap12:address location="https://moedadigital.net/Gateway.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GatewayHttpGet" binding="tns:GatewayHttpGet">
+      <http:address location="https://moedadigital.net/Gateway.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GatewayHttpPost" binding="tns:GatewayHttpPost">
+      <http:address location="https://moedadigital.net/Gateway.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

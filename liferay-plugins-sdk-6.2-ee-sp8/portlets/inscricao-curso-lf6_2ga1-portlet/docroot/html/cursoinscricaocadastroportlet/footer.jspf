@@ -1,0 +1,13 @@
+<hr />
+
+<div class="bloco-titulo">
+	<h2><liferay-ui:message key="label.contato" /></h2>
+			
+	<p>
+		<liferay-ui:message key="label.departamentoCursosEventos" />
+		</br>
+		<liferay-ui:message key="label.emailCursos" />
+		</br>
+		<liferay-ui:message key="label.telefonesCursos" />
+	</p>
+</div>

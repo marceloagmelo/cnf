@@ -1,0 +1,86 @@
+Detalhes da Inscrição
+ 
+<p/>
+<b>ID Curso:</b> $inscricao.getCursoId()
+<br/>
+<b>Curso:</b> $inscricao.getCursoNome()
+
+<p/>
+<b>ID Participante:</b> $participante.getParticipanteId()
+<br/>
+<b>Nome completo:</b> $participante.getNomeCompleto()
+<br/>
+<b>Sexo:</b> $participante.getSexo()
+<br/>
+<b>CPF:</b> $participante.getCpf()
+<br/>
+<b>E-mail Comercial:</b> $participante.getEmailPrincipal()
+<br/>
+<b>Telefone Principal:</b> ($participante.getDddTelefoneComercial()) $participante.getTelefoneComercial()
+<br/>
+<b>Telefone Celular:</b> ($participante.getDddTelefoneCelular()) $participante.getTelefoneCelular()
+<br/>
+<b>Formação Acadêmica:</b> $participante.getFormacaoAcademica()
+
+<p/>
+<b>Nome para crachá:</b> $participante.getNomeCracha()
+
+<p/>
+<b>Instituição (Nome Fantasia):</b> $participante.getEmpresaOndeTrabalha()
+
+<p/>
+<b>Cargo:</b> $participante.getCargo()
+<br/>
+<b>Departamento:</b> $participante.getDepartamento()
+<br/>
+<b>Endereço:</b> $participante.getEndereco()
+<br/>
+<b>Bairro:</b> $participante.getBairro()
+<br/>
+<b>Cidade:</b> $participante.getCidade()
+<br/>
+<b>Estado:</b> $participante.getEstado()
+<br/>
+<b>CEP:</b> $participante.getCep()
+
+<p/>
+Qual a sua expectativa com relação ao tema? Espera que algum conteúdo específico seja abordado?
+
+<p/>
+$participante.getExpectativaCurso()
+
+<p/>
+<b>Observações: </b>
+
+<p/>
+$participante.getObservacao()
+
+<p/>
+<b>Nome do Responsável pela Inscrição:</b> $inscricao.getNomeResponsavel()
+<br/>
+<b>E-mail Comercial:</b> $inscricao.getEmailPrincipal()
+<br/>
+<b>Telefone Principal:</b> ($inscricao.getDddTelefoneComercial()) $inscricao.getTelefoneComercial()
+
+<p/>
+Responsável pelo recebimento da Nota Fiscal
+<br/>
+<b>Nome:</b> $ciCpf.getNome()
+<br/>
+<b>CPF:</b> $ciCpf.getCpf()
+<br/>
+<b>Endereço:</b> $ciCpf.getEndereco()
+<br/>
+<b>Bairro:</b> $ciCpf.getBairro()
+<br/>
+<b>Cidade:</b> $ciCpf.getCidade()
+<br/>
+<b>Estado:</b> $ciCpf.getEstado()
+<br/>
+<b>CEP:</b> $ciCpf.getCep()
+<br/>
+<b>E-mail:</b> $ciCpf.getEmail()
+<b>Telefone:</b> ($ciCpf.getDddTelefone()) $ciCpf.getTelefone()
+
+<p/>
+<b>Valor da inscrição:</b> $participante.getValorPago()

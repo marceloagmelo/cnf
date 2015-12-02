@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="br.com.cnf.curso.inscricao.service.CursoInscricaoLocalService" class="br.com.cnf.curso.inscricao.service.impl.CursoInscricaoLocalServiceImpl" />
+	<bean id="br.com.cnf.curso.inscricao.service.persistence.CursoInscricaoPersistence" class="br.com.cnf.curso.inscricao.service.persistence.CursoInscricaoPersistenceImpl" parent="basePersistence" />
+	<bean id="br.com.cnf.curso.inscricao.service.CursoInscricaoCnpjLocalService" class="br.com.cnf.curso.inscricao.service.impl.CursoInscricaoCnpjLocalServiceImpl" />
+	<bean id="br.com.cnf.curso.inscricao.service.persistence.CursoInscricaoCnpjPersistence" class="br.com.cnf.curso.inscricao.service.persistence.CursoInscricaoCnpjPersistenceImpl" parent="basePersistence" />
+	<bean id="br.com.cnf.curso.inscricao.service.CursoInscricaoCpfLocalService" class="br.com.cnf.curso.inscricao.service.impl.CursoInscricaoCpfLocalServiceImpl" />
+	<bean id="br.com.cnf.curso.inscricao.service.persistence.CursoInscricaoCpfPersistence" class="br.com.cnf.curso.inscricao.service.persistence.CursoInscricaoCpfPersistenceImpl" parent="basePersistence" />
+	<bean id="br.com.cnf.curso.inscricao.service.CursoParticipanteLocalService" class="br.com.cnf.curso.inscricao.service.impl.CursoParticipanteLocalServiceImpl" />
+	<bean id="br.com.cnf.curso.inscricao.service.persistence.CursoParticipantePersistence" class="br.com.cnf.curso.inscricao.service.persistence.CursoParticipantePersistenceImpl" parent="basePersistence" />
+	<bean id="br.com.cnf.curso.inscricao.service.PedidoMoedaDigitalLocalService" class="br.com.cnf.curso.inscricao.service.impl.PedidoMoedaDigitalLocalServiceImpl" />
+	<bean id="br.com.cnf.curso.inscricao.service.persistence.PedidoMoedaDigitalPersistence" class="br.com.cnf.curso.inscricao.service.persistence.PedidoMoedaDigitalPersistenceImpl" parent="basePersistence" />
+</beans>

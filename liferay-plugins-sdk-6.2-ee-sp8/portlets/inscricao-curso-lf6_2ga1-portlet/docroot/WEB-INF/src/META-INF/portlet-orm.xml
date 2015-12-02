@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="br.com.cnf.curso.inscricao.model.impl.CursoInscricaoModelImpl">
+		<attributes>
+			<id name="inscricaoId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userCreateId" />
+			<basic name="userCreateName" />
+			<basic name="userModifiedId" />
+			<basic name="userModifiedName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="cursoId" />
+			<basic name="cursoNome" />
+			<basic name="cursoData" />
+			<basic name="cursoHorario" />
+			<basic name="cursoLocal" />
+			<basic name="preco" />
+			<basic name="precoConvenio" />
+			<basic name="precoAssociado" />
+			<basic name="tipoFisicaJuridica" />
+			<basic name="cpfCnpj" />
+			<basic name="nomeResponsavel" />
+			<basic name="emailPrincipal" />
+			<basic name="dddTelefoneComercial" />
+			<basic name="telefoneComercial" />
+			<basic name="sexo" />
+			<basic name="cadastroFinalizado" />
+			<basic name="formaPagamento" />
+			<basic name="numeroCartao" />
+			<basic name="validadeCartaoMes" />
+			<basic name="validadeCartaoAno" />
+			<basic name="nomeTitularCartao" />
+			<basic name="codigoSegurancaCartao" />
+			<basic name="statusMoedaDigital" />
+			<basic name="quantidadeParcelas" />
+			<basic name="valorTotal" />
+			<basic name="moedaDigitalPedido" />
+			<basic name="dataInicio">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="br.com.cnf.curso.inscricao.model.impl.CursoInscricaoCnpjModelImpl">
+		<attributes>
+			<id name="inscricaoCnpjId" />
+			<basic name="inscricaoId" />
+			<basic name="razaoSocial" />
+			<basic name="nomeFantasia" />
+			<basic name="inscricaoEstadual" />
+			<basic name="endereco" />
+			<basic name="bairro" />
+			<basic name="cidade" />
+			<basic name="estado" />
+			<basic name="cep" />
+			<basic name="dddTelefone" />
+			<basic name="telefone" />
+			<basic name="nfNome" />
+			<basic name="nfDepartamento" />
+			<basic name="nfEmail" />
+			<basic name="nfDddTelefone" />
+			<basic name="nfTelefone" />
+			<basic name="observacao" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="br.com.cnf.curso.inscricao.model.impl.CursoInscricaoCpfModelImpl">
+		<attributes>
+			<id name="inscricaoCpfId" />
+			<basic name="inscricaoId" />
+			<basic name="nome" />
+			<basic name="cpf" />
+			<basic name="endereco" />
+			<basic name="bairro" />
+			<basic name="cidade" />
+			<basic name="estado" />
+			<basic name="cep" />
+			<basic name="dddTelefone" />
+			<basic name="telefone" />
+			<basic name="email" />
+			<basic name="empresa" />
+			<basic name="cargo" />
+			<basic name="departamento" />
+			<basic name="observacao" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="br.com.cnf.curso.inscricao.model.impl.CursoParticipanteModelImpl">
+		<attributes>
+			<id name="participanteId" />
+			<basic name="inscricaoId" />
+			<basic name="nomeCompleto" />
+			<basic name="nomeCracha" />
+			<basic name="cpf" />
+			<basic name="sexo" />
+			<basic name="cargo" />
+			<basic name="empresaOndeTrabalha" />
+			<basic name="departamento" />
+			<basic name="formacaoAcademica" />
+			<basic name="emailPrincipal" />
+			<basic name="emailOpcional" />
+			<basic name="dddTelefoneComercial" />
+			<basic name="telefoneComercial" />
+			<basic name="dddTelefonePessoal" />
+			<basic name="telefonePessoal" />
+			<basic name="dddTelefoneCelular" />
+			<basic name="telefoneCelular" />
+			<basic name="endereco" />
+			<basic name="bairro" />
+			<basic name="cidade" />
+			<basic name="estado" />
+			<basic name="cep" />
+			<basic name="valorPago" />
+			<basic name="expectativaCurso" />
+			<basic name="observacao" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="br.com.cnf.curso.inscricao.model.impl.PedidoMoedaDigitalModelImpl">
+		<attributes>
+			<id name="pedidoMoedaDigitalId" />
+			<basic name="inscricaoId" />
+			<basic name="dataPedido">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="xmlEnvio" />
+			<basic name="xmlRetorno" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="xmlEnvioCurrentLanguageId" />
+			<transient name="xmlEnvioMap" />
+			<transient name="xmlRetornoCurrentLanguageId" />
+			<transient name="xmlRetornoMap" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="br.com.cnf.curso.inscricao.model.impl.CursoInscricaoImpl" name="CursoInscricao">
+		<table name="cnf_CursoInscricao" />
+		<attributes />
+	</entity>
+	<entity class="br.com.cnf.curso.inscricao.model.impl.CursoInscricaoCnpjImpl" name="CursoInscricaoCnpj">
+		<table name="cnf_CursoInscricaoCnpj" />
+		<attributes />
+	</entity>
+	<entity class="br.com.cnf.curso.inscricao.model.impl.CursoInscricaoCpfImpl" name="CursoInscricaoCpf">
+		<table name="cnf_CursoInscricaoCpf" />
+		<attributes />
+	</entity>
+	<entity class="br.com.cnf.curso.inscricao.model.impl.CursoParticipanteImpl" name="CursoParticipante">
+		<table name="cnf_CursoParticipante" />
+		<attributes />
+	</entity>
+	<entity class="br.com.cnf.curso.inscricao.model.impl.PedidoMoedaDigitalImpl" name="PedidoMoedaDigital">
+		<table name="cnf_PedidoMoedaDigital" />
+		<attributes />
+	</entity>
+</entity-mappings>

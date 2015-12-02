@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.cnf", "br.com.cnf.curso.inscricao.service", "inscricao-curso-lf6_1ga1-portlet");
